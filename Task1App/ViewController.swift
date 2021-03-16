@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField4: UITextField!
+    @IBOutlet weak var textField5: UITextField!
     @IBOutlet weak var textlabel: UILabel?
     
     private var totalValue:Int!
@@ -25,8 +26,7 @@ class ViewController: UIViewController {
         textField2.keyboardType = UIKeyboardType.numberPad
         textField3.keyboardType = UIKeyboardType.numberPad
         textField4.keyboardType = UIKeyboardType.numberPad
-        
-        
+        textField5.keyboardType = UIKeyboardType.numberPad
         
     }
     
@@ -43,9 +43,9 @@ class ViewController: UIViewController {
     }
     
     
-    func culculate(num1:Int,num2:Int,num3:Int,num4:Int) -> Int{
+    func culculate(num1:Int,num2:Int,num3:Int,num4:Int,num5:Int) -> Int{
         //合計値を算出する
-        num1 + num2 + num3 + num4
+        num1 + num2 + num3 + num4 + num5
         
     }
 
@@ -56,7 +56,9 @@ class ViewController: UIViewController {
             num1: changeStringToInt(string: textField1.text ?? ""),
             num2: changeStringToInt(string: textField2.text ?? ""),
             num3: changeStringToInt(string: textField3.text ?? ""),
-            num4: changeStringToInt(string: textField4.text ?? ""))
+            num4: changeStringToInt(string: textField4.text ?? ""),
+            num5: changeStringToInt(string: textField5.text ?? "")
+        )
         
         textlabel?.text = String(totalValue)
         
